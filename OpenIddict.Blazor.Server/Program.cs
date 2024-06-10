@@ -47,7 +47,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
  builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
      .AddEntityFrameworkStores<ApplicationDbContext>()
-     .AddSignInManager()//Enabling this results in "InvalidOperationException: No sign-out authentication handler is registered for the scheme 'Identity.External'. The registered sign-out schemes are: OpenIddict.Client.AspNetCore, Microsoft, OpenIddict.Server.AspNetCore. Did you forget to call AddAuthentication().AddCookie("Identity.External",...)?"
+     .AddSignInManager()
      .AddDefaultTokenProviders();
 
 // builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
